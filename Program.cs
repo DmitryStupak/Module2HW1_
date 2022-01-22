@@ -66,21 +66,14 @@ namespace NixFirst4HW
                 }
 
                 Console.WriteLine();
-                Console.WriteLine("Массив с большим количеством букв в верхнем регистре: ");
                 if (NumToChar(arr1).count > NumToChar(arr2).count)
                 {
-                    foreach (var item in NumToChar(arr1).arr)
-                    {
-                        Console.Write($"{item} ");
-                    }
+                    Console.Write($"В первом массиве больше букв в верхнем регистре - {NumToChar(arr1).count}");
                 }
 
                 if (NumToChar(arr2).count > NumToChar(arr1).count)
                 {
-                    foreach (var item in NumToChar(arr2).arr)
-                    {
-                        Console.Write($"{item} ");
-                    }
+                    Console.Write($"Во втором массиве больше букв в верхнем регистре - {NumToChar(arr2).count}");
                 }
 
                 if (NumToChar(arr2).count == NumToChar(arr1).count)
@@ -88,6 +81,8 @@ namespace NixFirst4HW
                     Console.WriteLine();
                     Console.WriteLine("Массивы с одинаковым кол-вом букв в верхнем регистре");
                 }
+
+                Console.WriteLine();
             }
             else
             {

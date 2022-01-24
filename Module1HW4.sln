@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NixFirst4HW", "NixFirst4HW.csproj", "{B3D0624F-D5A5-4A29-8CE3-D45CC4DB42E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module1HW4", "Module1HW4.csproj", "{B3D0624F-D5A5-4A29-8CE3-D45CC4DB42E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

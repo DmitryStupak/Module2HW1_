@@ -28,7 +28,6 @@ namespace NixFirst4HW
                 {
                     arr[i] = random.Next(1, 26);
 
-                    /*Console.Write($"{arr[i]} ");*/
                     if (arr[i] % 2 == 0)
                     {
                         el++;

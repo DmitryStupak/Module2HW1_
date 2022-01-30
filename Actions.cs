@@ -7,14 +7,14 @@ namespace Module2HW1
         public static Result First()
         {
             Logger log = Logger.Instance;
-            log.LogWrite(new LogType("Info", $"Start method: First "));
+            log.LogWrite(new LogType("Info", $"Start method : First "));
             return new Result(true);
         }
 
         public static Result Second()
         {
             Logger log = Logger.Instance;
-            log.LogWrite(new LogType("Warning", $"Skipped logic in method: Second"));
+            log.LogWrite(new LogType("Warning", $"Skipped logic in method : Second"));
             return new Result(true);
         }
 

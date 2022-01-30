@@ -14,21 +14,33 @@ namespace Module2HW1
                 switch (num)
                 {
                     case 1:
-                        Actions.First();
+                        if (!Actions.First().Status)
+                        {
+                            Logger log = Logger.Instance;
+                            log.LogWrite(Logger.TypeLog.Error, $"Action failed by a reason:{Actions.First().Error}");
+                        }
+
                         break;
                     case 2:
-                        Actions.Second();
+                        if (!Actions.Second().Status)
+                        {
+                            Logger log = Logger.Instance;
+                            log.LogWrite(Logger.TypeLog.Error, $"Action failed by a reason:{Actions.Second().Error}");
+                        }
+
+                        break;
+                    case 3:
+                        if (!Actions.Third().Status)
+                        {
+                            Logger log = Logger.Instance;
+                            log.LogWrite(Logger.TypeLog.Error, $"Action failed by a reason:{Actions.Third().Error}");
+                        }
+
                         break;
                 }
 
-                if (num == 3)
-                {
-                    Logger log = Logger.Instance;
-                    log.LogWrite(Logger.TypeLog.Error, $"Action failed by a reason:{Actions.Third().Error}");
-                }
+                File.WriteAllLines("log.txt", Logger.GetLog());
             }
-
-            File.WriteAllLines("log.txt", Logger.GetLog());
         }
     }
 }

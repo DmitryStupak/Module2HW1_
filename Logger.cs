@@ -16,13 +16,6 @@ namespace Module2HW1
         {
         }
 
-        public enum TypeLog
-        {
-            Error,
-            Info,
-            Warning
-        }
-
         public static Logger Instance
         {
             get
@@ -36,21 +29,20 @@ namespace Module2HW1
             }
         }
 
-        public void LogWrite(object type, string str)
+        public void LogWrite(LogType log)
         {
-            string logStr = $"{DateTime.Now} : {(TypeLog)type} : {str}";
-            Console.WriteLine(logStr);
-            AddToLog(logStr);
-        }
-
-        public static void AddToLog(string str)
-        {
-            log.Add(str);
+            Console.WriteLine(log.ToString());
+            AddToLog(log.ToString());
         }
 
         public static List<string> GetLog()
         {
             return log;
+        }
+
+        private static void AddToLog(string str)
+        {
+            log.Add(str);
         }
     }
 }

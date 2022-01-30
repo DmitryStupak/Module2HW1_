@@ -17,7 +17,7 @@ namespace Module2HW1
                         if (!Actions.First().Status)
                         {
                             Logger log = Logger.Instance;
-                            log.LogWrite(Logger.TypeLog.Error, $"Action failed by a reason:{Actions.First().Error}");
+                            log.LogWrite(new LogType("Error", $"Action failed by a reason:{Actions.First().Error}"));
                         }
 
                         break;
@@ -25,7 +25,7 @@ namespace Module2HW1
                         if (!Actions.Second().Status)
                         {
                             Logger log = Logger.Instance;
-                            log.LogWrite(Logger.TypeLog.Error, $"Action failed by a reason:{Actions.Second().Error}");
+                            log.LogWrite(new LogType("Error", $"Action failed by a reason:{Actions.Second().Error}"));
                         }
 
                         break;
@@ -33,7 +33,7 @@ namespace Module2HW1
                         if (!Actions.Third().Status)
                         {
                             Logger log = Logger.Instance;
-                            log.LogWrite(Logger.TypeLog.Error, $"Action failed by a reason:{Actions.Third().Error}");
+                            log.LogWrite(new LogType("Error", $"Action failed by a reason:{Actions.Third().Error}"));
                         }
 
                         break;

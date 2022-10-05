@@ -39,7 +39,7 @@ namespace Module2HW1
                         break;
                 }
 
-                File.WriteAllLines("log.txt", Logger.GetLog());
+                File.WriteAllLines("C:\\1\\log.txt", Logger.GetLog());
             }
         }
     }
